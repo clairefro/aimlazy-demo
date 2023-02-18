@@ -3,9 +3,10 @@
 const program = require("commander");
 const { openai } = require("./lib/openai");
 const { writeDataToFile } = require("./lib/writeDataToFile");
+const package = require("./package.json");
 
 program
-  .version("1.0.0")
+  .version(package.version)
   .description("A Node CLI for generating responses from OpenAI's API");
 
 program
