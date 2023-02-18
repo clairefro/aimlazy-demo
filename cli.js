@@ -23,11 +23,10 @@ program
         writeDataToFile(text, opts.out);
       }
     } catch (e) {
-      console.log("something went wrong when calling the API");
+      console.log("Something went wrong");
+      console.log(e.message);
       process.exit(1);
     }
   });
-
-program.command("prompt <prompt>");
 
 program.parse(process.argv);
